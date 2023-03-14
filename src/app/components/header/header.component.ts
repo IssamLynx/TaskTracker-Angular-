@@ -9,4 +9,7 @@ export class HeaderComponent {
   text = 'Add';
   color = 'green';
   title = 'TaskTracker-Angular';
+  toggleAddTask() {
+    console.log('toggle');
+  }
 }

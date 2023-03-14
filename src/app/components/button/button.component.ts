@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,4 +8,9 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() color = ''; // decorate the property with @Input()
   @Input() text = ''; // decorate the property with @Input()
+  @Output() btnClick = new EventEmitter();
+
+  toggleTask() {
+    this.btnClick.emit();
+  }
 }
