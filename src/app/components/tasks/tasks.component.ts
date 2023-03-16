@@ -18,4 +18,10 @@ export class TasksComponent {
       this.tasks = this.tasks.filter((t) => t.id !== task.id);
     });
   }
+  toggleTask(task: Task) {
+    console.log('ici ça marche');
+
+    task.reminder = !task.reminder;
+    this.taskService.toggleTask(task).subscribe();
+  }
 }
