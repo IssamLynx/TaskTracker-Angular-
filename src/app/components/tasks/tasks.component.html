@@ -1,4 +1,4 @@
-<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<app-add-task *ngIf="showAddTask" (onAddTask)="addTask($event)"></app-add-task>
 <app-task-item
   (onToggleTask)="toggleTask(task)"
   (onDeleteTask)="deleteTask(task)"
